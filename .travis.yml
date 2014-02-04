@@ -38,7 +38,7 @@ env:
     - COVERITY_SCAN_BRANCH_PATTERN="master"
 
     # COVERITY_SCAN_TOKEN via "travis encrypt" using the repo's public key
-    - secure: "UV7mXB3FHpaigIqIJwUoEnsLKZGQj9jc6uz5NKGXqPlxjNsz/OthOSGdIjGCr6zNboH1Tp7aml+hyHiFO+2O9nF3KFjDZsDdzDjQu8gaSHdGrdId8j2rymCmniQOpEeWvbOx8YcgDiVqV3YXu7Nu1NttSxV95eiYHD9LAE6Ps3Q="
+    - secure: "fLbe9HZULOVprBTkz49A8MILgPGUYpVOvBia6r8PJuw21wACrMqmNqYaqm4YFYXk+xTQp4ghfsCxNbP3ToSLy5ugfYxvmZN/VqgJ7NmbSgfp0RgE4NIWJ/8mjUwQMaAn6cjvLoJkjksN5t14l4Bhg0tahyC8x9gErqhlvGto4+Q="
 
     - COVERITY_SCAN_BUILD_URL="https://scan.coverity.com/scripts/travisci_build_coverity_scan.sh"
     - COVERITY_SCAN_BUILD="curl -s $COVERITY_SCAN_BUILD_URL | bash"
