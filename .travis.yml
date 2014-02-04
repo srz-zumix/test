@@ -35,10 +35,9 @@ env:
 
     # Regular expression selects on which branches to run analysis
     # Be aware of quotas. Do not run on every branch/commit
-    - COVERITY_SCAN_BRANCH_PATTERN="coverity_scan"
+    - COVERITY_SCAN_BRANCH_PATTERN="master"
 
     # COVERITY_SCAN_TOKEN via "travis encrypt" using the repo's public key
-    - COVERITY_SCAN_TOKEN=5sU5fdw7LMOl3_o_P3umhQ
     - secure: "UV7mXB3FHpaigIqIJwUoEnsLKZGQj9jc6uz5NKGXqPlxjNsz/OthOSGdIjGCr6zNboH1Tp7aml+hyHiFO+2O9nF3KFjDZsDdzDjQu8gaSHdGrdId8j2rymCmniQOpEeWvbOx8YcgDiVqV3YXu7Nu1NttSxV95eiYHD9LAE6Ps3Q="
 
     - COVERITY_SCAN_BUILD_URL="https://scan.coverity.com/scripts/travisci_build_coverity_scan.sh"
