@@ -1,0 +1,26 @@
+language: cpp
+
+compiler:
+  - clang
+  - gcc
+
+before_install:
+  - sudo easy_install cpp-coveralls
+
+env:
+ - STDFLAG=-std=c++98
+ - STDFLAG=-std=c++0x
+ - USE_COVERAGE=1
+
+matrix:
+  exclude:
+    - compiler: clang
+      env: USE_COVERAGE=1
+
+script:
+  - cd test
+  - make
+
+after_success:
+  - if [ "${USE_COVERAGE}" = '1' ]; then cd ./test; make send-coverage; fi
+ 
