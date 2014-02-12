@@ -11,6 +11,8 @@ install:
  - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
  - sudo apt-get -qq update
  - sudo apt-get -qq install g++-4.8
+ - sudo update-alternatives --list g++
+ - sudo update-alternatives --set g++ /usr/bin/g++4.8
 
 env:
   global:
