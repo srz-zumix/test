@@ -8,11 +8,18 @@ before_install:
   - sudo easy_install cpp-coveralls
 
 install:
- - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
- - sudo apt-get -qq update
- - sudo apt-get -qq install g++-4.8
- - sudo update-alternatives --list gcc
- - sudo update-alternatives --set gcc /usr/bin/gcc-4.8
+  - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
+  - sudo apt-get -qq update
+  - sudo apt-get -qq install g++-4.8
+  - ls /usr/bin/*-4.8
+  - sudo update-alternatives --install /usr/bin/gcc  gcc  /usr/bin/gcc-4.8 90
+  - sudo update-alternatives --install /usr/bin/g++  g++  /usr/bin/g++-4.8 90
+  - sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-4.8 90
+  # clang 3.5
+  - wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
+  - sudo add-apt-repository --yes 'deb http://llvm.org/apt/precise/ llvm-toolchain-precise main'
+  - sudo apt-get -qq update
+  - sudo apt-get -qq install clang-3.5
 
 env:
   global:
@@ -69,6 +76,7 @@ matrix:
       env: COVERITY_SCAN=1
 
 script:
+  - clang++ --version
   - g++ --version
   - gcov -v
   - if [ "${COVERITY_SCAN}" = '1' ]; then eval "$COVERITY_SCAN_BUILD"; else eval "$STANDARD_BUILD_COMMAND"; fi
