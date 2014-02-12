@@ -11,10 +11,10 @@ install:
   - sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test
   - sudo apt-get -qq update
   - if [ "${CXX}" = 'gcc' ]; then
-    sudo apt-get -qq install g++-4.8;
-    sudo update-alternatives --install /usr/bin/gcc  gcc  /usr/bin/gcc-4.8 90;
-    sudo update-alternatives --install /usr/bin/g++  g++  /usr/bin/g++-4.8 90;
-    sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-4.8 90;
+    sudo apt-get -qq install g++-4.8; \
+    sudo update-alternatives --install /usr/bin/gcc  gcc  /usr/bin/gcc-4.8 90; \
+    sudo update-alternatives --install /usr/bin/g++  g++  /usr/bin/g++-4.8 90; \
+    sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-4.8 90; \
   fi
   # clang 3.5
   - wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
