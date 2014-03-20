@@ -1,10 +1,5 @@
 language:
-  - cpp
-  - objective-c
-
-compiler:
-  - clang
-  - gcc
+  - python
 
 before_install:
   - sudo easy_install cpp-coveralls
