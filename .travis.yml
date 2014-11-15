@@ -1,0 +1,13 @@
+language: cpp
+
+compiler:
+  - clang
+  - gcc
+
+install:
+  # iutest
+  - git clone https://github.com/srz-zumix/iutest.git iutest
+
+script:
+  - cd ./test
+  - make all
