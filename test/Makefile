@@ -8,8 +8,12 @@ endif
 
 clean:
 	$(RM) -rf test
+	
+run: test
+	./test
 
-all: clean default
+
+all: clean default run
 
 # coverage
 send-coverage:
