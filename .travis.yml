@@ -5,9 +5,12 @@ compiler:
   - gcc
 
 before_install:
+  - if [ "${CXX}" = 'g++' ]; then sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test; fi
   - sudo add-apt-repository -y ppa:ubuntu-wine/ppa
   - sudo apt-get -qq update
 #  - sudo apt-get -qq upgrade
+
+install:
 #  - sudo apt-get install -y binutils-mingw-w64-i686
 #  - sudo apt-get install -y gcc-mingw-w64-i686 mingw-w64-tools
   - sudo apt-get -qq -y install wine
