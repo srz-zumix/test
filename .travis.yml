@@ -14,8 +14,6 @@ install:
 #  - sudo apt-get install -y binutils-mingw-w64-i686
 #  - sudo apt-get install -y gcc-mingw-w64-i686 mingw-w64-tools
   - sudo apt-get -qq -y install wine
-
-install:
   # iutest
   - git clone https://github.com/srz-zumix/iutest.git iutest
 
