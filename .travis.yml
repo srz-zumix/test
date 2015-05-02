@@ -1,21 +1,22 @@
 language: cpp
-
 compiler:
-  - clang
-  - gcc
-
+ - clang
+ - gcc
+ 
 before_install:
-#  - sudo add-apt-repository -y ppa:ubuntu-wine/ppa
-  - sudo apt-get -qq update
-  - sudo apt-get -qq upgrade
-#  - sudo apt-get install -y binutils-mingw-w64-i686
-#  - sudo apt-get install -y gcc-mingw-w64-i686 mingw-w64-tools
-  - sudo apt-get -qq -y install wine
+ - sudo apt-get -qq update
+ - sudo apt-get -qq upgrade
+ - sudo apt-get -qq -y install wine
 
 install:
-  # iutest
-  - git clone https://github.com/srz-zumix/iutest.git iutest
+ - git clone https://github.com/srz-zumix/iutest.git iutest
 
 script:
-  - cd ./test
-  - make all
+ - cd ./test
+ - make all
+
+env:
+  global:
+   - USE_TWILIO=1
+   # SID, AUTH, NUMBER, TO
+   - secure: BGw3UG3AWXP2WHaYddMazYk9Fh99BRgg6NokN54pavENdJ1r6U4BkHlSipriOYxIEgrdT+DBLKck6BfMYjkYGx6hlWD6VY+moXESHErQX5SGWyvLyMgi33k2j1YxKFcz6zb4iLujKljhPPMao117RqfSgRb/qGzSIVW965Zmpu4=

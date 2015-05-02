@@ -12,8 +12,12 @@ clean:
 run: test
 	./test
 
+twilio:
+ifdef USE_TWILIO
+	if [ ./test ] then: ../iutest/tools/twilio/iutwilio.py --account_sid=$(SID) --autho_token=$(AUTH) --number=$(NUMBER) --call $(TO); fi
+endif
 
-all: clean default run
+all: clean default run twilio
 
 # coverage
 send-coverage:
