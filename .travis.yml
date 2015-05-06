@@ -1,12 +1,9 @@
 language: cpp
 compiler:
- - clang
  - gcc
  
 before_install:
  - sudo apt-get -qq update
- - sudo apt-get -qq upgrade
- - sudo apt-get -qq -y install wine
 
 install:
  - git clone https://github.com/srz-zumix/iutest.git iutest
