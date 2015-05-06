@@ -3,6 +3,7 @@ compiler:
  - gcc
  
 before_install:
+ - export PYTHONDONTWRITEBYTECODE=1
  - sudo apt-get -qq update
 
 install:
