@@ -14,7 +14,7 @@ run: test
 
 twilio:
 ifdef USE_TWILIO
-	@if [ ./test ]; then cd ../iutest/tools/twilio; iutwilio.py --account_sid=$(SID) --autho_token=$(AUTH) --number=$(NUMBER) --call $(TO); fi
+	@if [ ./test ]; then cd ../iutest/tools/twilio; ./iutwilio.py --account_sid=$(SID) --autho_token=$(AUTH) --number=$(NUMBER) --call $(TO); fi
 endif
 
 all: clean default run twilio
