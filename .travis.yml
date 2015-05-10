@@ -6,6 +6,8 @@ before_install:
 
 install:
  - git clone https://github.com/srz-zumix/iutest.git iutest
+# - pip install twilio
+ - easy_install twilio
 
 script:
  - cd ./test
