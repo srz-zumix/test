@@ -13,6 +13,7 @@ run: test
 	./test
 
 twilio:
+	./hello.py
 ifdef USE_TWILIO
 	@if [ ./test ]; then cd ../iutest/tools/twilio; ./iutwilio.py --account_sid=$(SID) --autho_token=$(AUTH) --number=$(NUMBER) --call $(TO); fi
 endif
