@@ -6,6 +6,7 @@ before_install:
 
 install:
  - sudo git clone https://github.com/srz-zumix/iutest.git iutest
+ - ls -l iutest/tools/twilio
 # - pip install twilio
  - easy_install twilio
 
