@@ -5,7 +5,7 @@ before_install:
  - sudo apt-get -qq update
 
 install:
- - git clone https://github.com/srz-zumix/iutest.git iutest
+ - sudo git clone https://github.com/srz-zumix/iutest.git iutest
 # - pip install twilio
  - easy_install twilio
 
