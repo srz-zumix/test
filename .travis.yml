@@ -1,7 +1,6 @@
 language: python
  
 before_install:
- - export PYTHONDONTWRITEBYTECODE=1
  - sudo apt-get -qq update
 
 install:
@@ -9,6 +8,9 @@ install:
  - ls -l iutest/tools/twilio
 # - pip install twilio
  - easy_install twilio
+
+before_script:
+ - export PYTHONDONTWRITEBYTECODE=1
 
 script:
  - cd ./test
