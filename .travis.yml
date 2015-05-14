@@ -20,4 +20,4 @@ env:
   global:
    - USE_TWILIO=1
    # SID, AUTH, NUMBER, TO
-   - secure: BGw3UG3AWXP2WHaYddMazYk9Fh99BRgg6NokN54pavENdJ1r6U4BkHlSipriOYxIEgrdT+DBLKck6BfMYjkYGx6hlWD6VY+moXESHErQX5SGWyvLyMgi33k2j1YxKFcz6zb4iLujKljhPPMao117RqfSgRb/qGzSIVW965Zmpu4=
+   - secure: Mdh51NUCYjQnCpu3Ewja35XO5kt4XfEfUUugkk8Ncs/idH5sou/RmbW+MU0eP0xLx61RkDuLr1+rjAuUm0dBcZt1eM1bWBCTJ4uWkseIpAIJIhCNkv1Vux3XQQqPe9z8RUHoak3WiwXt7+5ckdLPsYZ34kIKnSVFSfcHlENx/3k=
