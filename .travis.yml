@@ -23,8 +23,8 @@ matrix:
       addons:
         coverity_scan:
           project:
-            name: "srz-zumix/coverity_test"
-            description: "coverity_test"
+            name: "srz-zumix/test"
+            description: "coverity test"
           notification_email: zumix.cpp@gmail.com
           build_command_prepend: "make clean"
           build_command: make
