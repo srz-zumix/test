@@ -14,7 +14,7 @@ script:
 env:
   global:
     # COVERITY_SCAN_TOKEN
-    - secure: "UV7mXB3FHpaigIqIJwUoEnsLKZGQj9jc6uz5NKGXqPlxjNsz/OthOSGdIjGCr6zNboH1Tp7aml+hyHiFO+2O9nF3KFjDZsDdzDjQu8gaSHdGrdId8j2rymCmniQOpEeWvbOx8YcgDiVqV3YXu7Nu1NttSxV95eiYHD9LAE6Ps3Q="
+    - secure: "fLbe9HZULOVprBTkz49A8MILgPGUYpVOvBia6r8PJuw21wACrMqmNqYaqm4YFYXk+xTQp4ghfsCxNbP3ToSLy5ugfYxvmZN/VqgJ7NmbSgfp0RgE4NIWJ/8mjUwQMaAn6cjvLoJkjksN5t14l4Bhg0tahyC8x9gErqhlvGto4+Q="
 
 matrix:
   include:
