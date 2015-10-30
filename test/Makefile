@@ -9,10 +9,15 @@ endif
 	$(CXX) dump.cpp -o dump -std=c++0x
 	
 clean:
-	$(RM) -rf test
+	$(RM) -rf test dump
 	
 run: test
 	./test
+	./dump
+	
+dump: dump.cpp
+	$(CXX) -std=c++0x -dM -E -x c++ - < /dev/null
+	$(CXX) dump.cpp -o dump -std=c++0x
 	./dump
 
 
