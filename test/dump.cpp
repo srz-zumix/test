@@ -8,6 +8,8 @@ using namespace std;
 int main()
 {
     cout << TOSTR(_LIBCPP_VERSION) << endl;
+    cout << TOSTR(__GLIBC__) << endl;
+    cout << TOSTR(__GLIBC_MINOR__) << endl;
     cout << TOSTR(__GLIBCXX__) << endl;
     return 0;
 }
