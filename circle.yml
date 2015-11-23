@@ -1,3 +1,8 @@
+general:
+  branches:
+    only:
+      - ci
+
 test:
   override:
     - make :

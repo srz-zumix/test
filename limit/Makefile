@@ -3,7 +3,9 @@ n = 1
 default: version predefine loop
 
 version: Makefile
-	$(CXX) --version
+	-$(CXX) --version
+	-g++ --version
+	-clang++ --version
 
 predefine: Makefile
 	$(CXX) -std=c++0x -dM -E -x c++ - < /dev/null
